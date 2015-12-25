@@ -1,0 +1,15 @@
+couchpotato:
+  image: jbogatay/couchpotato
+  restart: always
+  ports:
+    - "5050:5050"
+  container_name: couchpotato
+  environment:
+    - COUCH_UID=500
+    - COUCH_GID=500
+  volumes:
+    - /etc/localtime:/etc/localtime:ro
+    - /home/media/.config/couchpotato:/config
+    - /home/media/video/movies:/movies
+    - /home/media/video/in/movies:/downloads
+    - /home/media/blackhole-out/movies:/blackhole
