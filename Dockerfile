@@ -3,7 +3,7 @@ MAINTAINER "Jeff Bogatay <jeff@bogatay.com>"
 
 ENV DEBIAN_FRONTEND noninteractive
 
-VOLUME ["/config","/downloads","/movies"]
+VOLUME ["/config","/downloads","/movies","/blackhole"]
 EXPOSE 5050
 CMD ["/app/start.sh"]
 
