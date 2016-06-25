@@ -5,8 +5,8 @@ couchpotato:
     - "5050:5050"
   container_name: couchpotato
   environment:
-    - COUCH_UID=500
-    - COUCH_GID=500
+    - APP_UID=500
+    - APP_GID=500
   volumes:
     - /etc/localtime:/etc/localtime:ro
     - /home/media/.config/couchpotato:/config

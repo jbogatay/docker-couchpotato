@@ -12,10 +12,10 @@ Complete run command with all options
         -v /mymoviedir:/movies \
         -v /myblackholedir:/blackhole \
         -v /etc/localtime:/etc/localtime:ro \
-        -e COUCH_UID=500 -e COUCH_GID=500 \
+        -e APP_UID=500 -e APP_GID=500 \
         jbogatay/couchpotato
 
 
 Change directory mappings as appropriate (myconfigdir, mydownloaddir, movies, blackhole).
 
-COUCH_UID and COUCH_GID are optional, but will default to 500/500.   Specify the UID/GID that corresponds to the **HOST** UID/GID you want to own the downloads, config and movies directories.
+APP_UID and APP_GID are optional, but will default to 500/500.   Specify the UID/GID that APPsponds to the **HOST** UID/GID you want to own the downloads, config and movies directories.
