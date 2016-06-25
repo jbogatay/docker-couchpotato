@@ -1,7 +1,7 @@
 docker-couchpotato
 ================
 
-Ubuntu:1510 based couchpotato.   Just couchpotato.
+Alpine based couchpotato.  Just couchpotato.  Under 85MB.
 
 Complete run command with all options
 
