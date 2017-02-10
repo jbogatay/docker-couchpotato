@@ -1,14 +1,14 @@
 couchpotato:
   image: jbogatay/couchpotato
-  restart: always
+  restart: unless-stopped
   ports:
     - "5050:5050"
   container_name: couchpotato
   environment:
-    - APP_UID=500
-    - APP_GID=500
+    - PUID=1001
+    - PGID=1001
+    - TZ=America/Detroit
   volumes:
-    - /etc/localtime:/etc/localtime:ro
     - /home/media/.config/couchpotato:/config
     - /home/media/video/movies:/movies
     - /home/media/video/in/movies:/downloads
