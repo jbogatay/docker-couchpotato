@@ -10,12 +10,11 @@ Complete run command with all options
         -v /myconfgidir:/config \
         -v /mydownloaddir:/downloads \
         -v /mymoviedir:/movies \
-        -v /myblackholedir:/blackhole \
-        -v /etc/localtime:/etc/localtime:ro \
-        -e APP_UID=500 -e APP_GID=500 \
+        -v /myblackholedir:/blackhole \        
+        -e PUID=500 -e PGID=500 \
         jbogatay/couchpotato
 
 
 Change directory mappings as appropriate (myconfigdir, mydownloaddir, movies, blackhole).
 
-APP_UID and APP_GID are optional, but will default to 500/500.   Specify the UID/GID that APPsponds to the **HOST** UID/GID you want to own the downloads, config and movies directories.
+APP_UID and APP_GID are optional, but will default to 911/911.   Specify the UID/GID that APPsponds to the **HOST** UID/GID you want to own the downloads, config and movies directories.
